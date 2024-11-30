@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  @apply bg-primary-100;
+  font-family: var(--font-main);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  button {
+    @apply bg-black px-3 py-1 text-primary-200 blur-[0.8px];
+  }
+
+  label {
+    @apply blur;
+  }
+
+  input {
+    @apply px-1 blur-[0.5px];
+  }
+
+  h1 {
+    @apply text-6xl;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .blur-sm {
+    @apply blur-[0.5px];
+  }
+
+  .blur {
+    @apply blur-[0.8px];
+  }
 }
