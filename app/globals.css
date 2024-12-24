@@ -9,7 +9,7 @@ body {
 
 @layer base {
   button {
-    @apply bg-black px-3 py-1 text-primary-200 blur-[0.8px];
+    @apply bg-black px-3 py-1 text-primary-200 blur-[0.8px] disabled:text-neutral-500;
   }
 
   label {
@@ -32,5 +32,8 @@ body {
 
   .blur {
     @apply blur-[0.8px];
+  }
+  normal {
+    @apply bg-none;
   }
 }
