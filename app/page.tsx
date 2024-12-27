@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex h-screen bg-[#ABFF00] pl-5">
@@ -10,25 +13,28 @@ export default function Home() {
         </div>
 
         <div className="mt-6 flex flex-col gap-4">
-          <button
+          <Link
+            href="/login"
             style={{ filter: "blur(1px)" }}
-            className="w-72 bg-black px-8 py-3 text-xl text-[#ABFF00]"
+            className="w-72 bg-black px-8 py-3 text-xl text-primary-100"
           >
             log in
-          </button>
-          <button
+          </Link>
+          <Link
+            href="/signup"
             style={{ filter: "blur(1px)" }}
-            className="w-72 bg-black px-8 py-3 text-xl text-[#ABFF00]"
+            className="w-72 bg-black px-8 py-3 text-xl text-primary-100"
           >
             sign in
-          </button>
+          </Link>
         </div>
       </div>
-      <div className="ml-40 w-1/2">
-        <img
+      <div className="relative w-1/2">
+        <Image
           src="/assets/charli.png"
           alt="Debt Tracker"
-          className="h-full object-cover"
+          className="h-max object-cover"
+          fill
         />
       </div>
     </div>
